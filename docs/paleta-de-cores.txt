@@ -1,0 +1,43 @@
+PALETA DE CORES:
+
+    --verde-escuro: #133309;
+    --verde-profundo: #1A450C;
+    --verde-oliva: #286812;
+    --marrom-profundo: #18110C;
+    --marrom-queimado: #281912;
+    --marrom-terra-escuro: #443022;
+    --preto-escuro: #070806;
+    --verde-cinza-escuro: #1F231A;
+    --azul-acinzentado-escuro: #0F151A;
+    --verde-médio: #3C7312;
+    --azul-acinzentado: #47627B;
+    --azul-petróleo: #212B31;
+    --marrom-sépia: #36251A;
+    --marrom-amadeirado: #2F1F16;
+    --marrom-claro: #3D2B1E;
+    --verde-musgo: #3D3D1B;
+    --verde-oliva-médio: #3D4F18;
+    --verde-floresta: #334A18;
+    --verde-folha: #2E4615;
+    --verde-bosque: #284112;
+
+    --verde-floresta-vivo: #1F4E18;     /* Versão mais viva de verde escuro */
+    --verde-grama: #2A6E1A;            /* Verde oliva mais saturado */
+    --verde-limão: #3FA82B;            /* Verde claro e vibrante */
+    --marrom-avermelhado: #5A3C28;     /* Marrom terroso mais quente */
+    --marrom-canela: #7A5235;          /* Tom de marrom mais claro e saturado */
+    --marrom-dourado: #B07D3D;         /* Marrom dourado */
+    --verde-primavera: #63B536;        /* Verde médio mais vívido */
+    --verde-pinho: #3A8C3A;            /* Verde pinho escuro, mais saturado */
+    --verde-musgo-vivo: #3D6818;       /* Verde musgo em versão mais viva */
+    --marrom-terracota: #8C4B2E;       /* Marrom claro e quente */
+    --verde-cacto: #548A34;            /* Verde com leve toque de cacto */
+    --marrom-âmbar: #A65E3B;           /* Marrom ambarado */
+    --marrom-barro: #B26A3D;           /* Marrom com tom de barro mais claro */
+    --verde-selva: #5B9233;            /* Verde selva vibrante */
+    --verde-louro: #468C31;            /* Verde intermediário vivo */
+    --verde-limão-suave: #63A844;      /* Verde mais claro e fresco */
+    --marrom-chocolate: #704A26;       /* Tom rico de chocolate */
+    --marrom-trigo: #996633;           /* Marrom mais amarelado */
+    --marrom-mel: #B07D3D;             /* Marrom amarelado e suave */
+    --verde-tropical: #329932;         /* Verde bem vibrante */
