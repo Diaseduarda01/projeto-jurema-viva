@@ -28,7 +28,7 @@
     --verde-floresta: #334A18;
     --verde-folha: #2E4615;
     --verde-bosque: #284112;
-
+    --white: #fff;
     --verde-floresta-vivo: #1F4E18;     /* Versão mais viva de verde escuro */
     --verde-grama: #2A6E1A;            /* Verde oliva mais saturado */
     --verde-limão: #3FA82B;            /* Verde claro e vibrante */
@@ -87,7 +87,7 @@ body {
     width: 850px;
     gap: 70px;
     padding: 60px 40px;
-    background: #fff;
+    background: var(--white);
     border-radius: 10px;
     align-items: flex-end;
     justify-content: space-between;
@@ -150,7 +150,7 @@ body {
     justify-content: center;
 }
 :where(.game-modal, .keyboard) button {
-    color: #fff;
+    color: var(--white);
     border: none;
     outline: none;
     cursor: pointer;
@@ -197,7 +197,7 @@ body {
     max-width: 420px;
     width: 100%;
     border-radius: 10px;
-    background: #fff;
+    background: var(--white);
     text-align: center;
     box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
@@ -217,7 +217,7 @@ body {
     font-weight: 500;
 }
 .game-modal p b {
-    color: #5E63BA;
+    color: var(--marrom-queimado);
     font-weight: 600;
 }
 .game-modal button {

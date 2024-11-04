@@ -14,7 +14,7 @@ const maxGuesses = 6; // Número máximo de tentativas
 const resetGame = () => {
     correctLetters = []; // Reinicia as letras corretas
     wrongGuessCount = 0; // Reinicia o contador de erros
-    hangmanImage.src = "images/hangman-0.svg"; // Imagem inicial do carrasco
+    hangmanImage.src = "../images/hangman-0.svg"; // Imagem inicial do carrasco
     guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`; // Atualiza o número de tentativas
     // Cria a estrutura da palavra com letras ocultas
     wordDisplay.innerHTML = currentWord.split("").map(() => `<li class="letter"></li>`).join("");
@@ -34,7 +34,7 @@ const getRandomWord = () => {
 // Função de fim de jogo
 const gameOver = (isVictory) => {
     const modalText = isVictory ? `Você encontrou a palavra:` : 'A palavra correta era:'; // Define o texto com base no resultado
-    gameModal.querySelector("img").src = `images/${isVictory ? 'victory' : 'lost'}.gif`; // Define a imagem de vitória ou derrota
+    gameModal.querySelector("img").src = `../images/${isVictory ? 'victory' : 'lost'}.gif`; // Define a imagem de vitória ou derrota
     gameModal.querySelector("h4").innerText = isVictory ? 'Parabéns!!' : 'Game Over!'; // Define a mensagem de vitória ou derrota
     gameModal.querySelector("p").innerHTML = `${modalText} <b>${currentWord}</b>`; // Mostra a palavra correta
     gameModal.classList.add("show"); // Exibe o modal
@@ -52,7 +52,7 @@ const initGame = (button, clickedLetter) => {
         });
     } else {
         wrongGuessCount++; // Aumenta o número de erros
-        hangmanImage.src = `images/hangman-${wrongGuessCount}.svg`; // Atualiza a imagem do carrasco
+        hangmanImage.src = `../images/hangman-${wrongGuessCount}.svg`; // Atualiza a imagem do carrasco
     }
     button.disabled = true; // Desativa o botão clicado
     guessesText.innerText = `${wrongGuessCount} / ${maxGuesses}`; // Atualiza o número de tentativas
