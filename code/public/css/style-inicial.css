@@ -6,7 +6,19 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-:root{
+:root {
+    /* Cores utilizadas n   o código */
+    --white-color: #ffffff;        /* Usado para fundos e bordas */
+    --gray-color: #cccccc;         /* Usado em fundo e borda de elementos */
+    --dark-gray-color: #333;       /* Usado em texto */
+    --dark-green: #017143;         /* Usado em botões e destaque */
+    --timeline-line: #0b7b5d;      /* Usado na linha da timeline */
+    --bg-yellow: #F6D155;          /* Usado no fundo da timeline */
+    --black-color: #000000;        /* Usado em texto */
+    --verde-escuro: #0c5738e2;
+
+
+    /* Cores não utilizadas (comentadas para facilitar visualização e organização)
     --verde-escuro: #133309;
     --verde-profundo: #1A450C;
     --verde-oliva: #286812;
@@ -17,7 +29,7 @@
     --verde-cinza-escuro: #1F231A;
     --azul-acinzentado-escuro: #0F151A;
     --verde-médio: #3C7312;
-    --azul-acinzentado: #47627B;
+    
     --azul-petróleo: #212B31;
     --marrom-sépia: #36251A;
     --marrom-amadeirado: #2F1F16;
@@ -28,50 +40,48 @@
     --verde-folha: #2E4615;
     --verde-bosque: #284112;
     --cream-white: #f3f2db;
-    --verde-floresta-vivo: #1F4E18;     /* Versão mais viva de verde escuro */
-    --verde-grama: #2A6E1A;            /* Verde oliva mais saturado */
-    --verde-limão: #3FA82B;            /* Verde claro e vibrante */
-    --marrom-avermelhado: #5A3C28;     /* Marrom terroso mais quente */
-    --marrom-canela: #7A5235;          /* Tom de marrom mais claro e saturado */
-    --marrom-dourado: #B07D3D;         /* Marrom dourado */
-    --verde-primavera: #63B536;        /* Verde médio mais vívido */
-    --verde-pinho: #3A8C3A;            /* Verde pinho escuro, mais saturado */
-    --verde-musgo-vivo: #3D6818;       /* Verde musgo em versão mais viva */
-    --marrom-terracota: #8C4B2E;       /* Marrom claro e quente */
-    --verde-cacto: #548A34;            /* Verde com leve toque de cacto */
-    --marrom-âmbar: #A65E3B;           /* Marrom ambarado */
-    --marrom-barro: #B26A3D;           /* Marrom com tom de barro mais claro */
-    --verde-selva: #5B9233;            /* Verde selva vibrante */
-    --verde-louro: #468C31;            /* Verde intermediário vivo */
-    --verde-limão-suave: #63A844;      /* Verde mais claro e fresco */
-    --marrom-chocolate: #704A26;       /* Tom rico de chocolate */
-    --marrom-trigo: #996633;           /* Marrom mais amarelado */
-    --marrom-mel: #B07D3D;             /* Marrom amarelado e suave */
-    --verde-tropical: #329932;         /* Verde bem vibrante */
+    --verde-floresta-vivo: #1F4E18;
+    --verde-grama: #2A6E1A;
+    --verde-limão: #3FA82B;
+    --marrom-avermelhado: #5A3C28;
+    --marrom-canela: #7A5235;
+    --marrom-dourado: #B07D3D;
+    --verde-primavera: #63B536;
+    --verde-pinho: #3A8C3A;
+    --verde-musgo-vivo: #3D6818;
+    --marrom-terracota: #8C4B2E;
+    --verde-cacto: #548A34;
+    --marrom-âmbar: #A65E3B;
+    --marrom-barro: #B26A3D;
+    --verde-selva: #5B9233;
+    --verde-louro: #468C31;
+    --verde-limão-suave: #63A844;
+    --verde-tropical: #329932;
+    */
 
-    
     /* Tamanhos de fonte */
-    --font-size-s: 0.9rem; /* Fonte pequena */
-    --font-size-n: 1rem; /* Fonte normal */
-    --font-size-m: 1.12rem; /* Fonte média */
-    --font-size-l: 1.5rem; /* Fonte grande */
-    --font-size-xl: 2rem; /* Fonte extra grande */
-    --font-size-xxl: 2.3rem; /* Fonte extra extra grande */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
 
     /* Espessuras da fonte */
-    --font-weight-normal: 400; /* Peso normal */
-    --font-weight-medium: 500; /* Peso médio */
-    --font-weight-semibold: 600; /* Peso semi-negrito */
-    --font-weight-bold: 700; /* Peso negrito */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
 
     /* Raio da borda */
-    --border-radius-s: 8px; /* Raio pequeno */
-    --border-radius-m: 30px; /* Raio médio */
-    --border-radius-circle: 50%; /* Bordas circulares */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
 
     /* Largura máxima do site */
-    --site-max-width: 1300px; /* Largura máxima do conteúdo */
+    --site-max-width: 1300px;
 }
+
 
 section{
     position: relative;
@@ -81,7 +91,7 @@ section{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #ffffff;
+    background: var(--white-color);
 }
 header{
     position: absolute;
@@ -95,22 +105,33 @@ header{
 }
 header .logo{
     position: relative;
-    max-width: 80px;
-}
-header ul{
-    position:relative;
+    max-width: 90px;
+}header ul {
+    position: relative;
     display: flex;
 }
-header ul li{
+
+header ul li {
     list-style: none;
 }
-header ul li a{
+
+header ul li a {
     display: inline-block;
-    color: #333;
+    color: var(--dark-gray-color);
     font-weight: 400;
     margin-left: 40px;
     text-decoration: none;
+    padding: 10px 10px; /* Define padding para o tamanho do fundo */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza a transição */
+    border-radius: 25px;
 }
+
+header ul li a:hover {
+    background-color: var(--dark-green); /* Cor de fundo verde */
+    color: var(--white-color); /* Cor do texto branco */
+    /* Arredonda o fundo, opcional */
+}
+
 .content{
     position: relative;
     width: 100%;
@@ -123,7 +144,7 @@ header ul li a{
     max-width: 600px;
 }
 .content .textbox h2{
-    color: #333;
+    color:  var(--dark-gray-color);
     font-size: 4.9em;
     line-height: 1.4em;
     font-weight: 500;
@@ -134,14 +155,14 @@ header ul li a{
     font-weight: 900;
 }
 .content .textbox p {
-    color: #333;
+    color:  var(--dark-gray-color);
 }
 .content .textbox a {
     display: inline-block;
     margin-top: 20px;
     padding: 8px 20px;
-    background: #017143;
-    color: #fff;
+    background: var(--dark-green);
+    color: var(--white-color);
     border-radius: 40px;
     font-weight: 500;
     letter-spacing: none;
@@ -154,7 +175,7 @@ header ul li a{
     justify-content: flex-end;
     padding-right: 50px;
     margin-top: 50px;
-    background-image: url(../images/images.jpg);
+    /* background-image: url(../images/images.jpg); */
     background-size: cover; /* Faz a imagem de fundo cobrir toda a área da div */
     background-repeat: no-repeat; /* Evita que a imagem se repita */
     background-position: center; /* Centraliza a imagem */
@@ -209,6 +230,199 @@ header ul li a{
     left: 0;
     width: 100%;
     height: 100%;
-    background: #017143;
+    background: var(--dark-green);
     clip-path: circle(600px at right 800px);
+}
+
+  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+.timeline {
+  position: relative;
+  width: 100%;
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 15px 0;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 2px;
+  background: var(--timeline-line);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -1px;
+}
+
+.container {
+  padding: 15px 30px;
+  position: relative;
+  background: inherit;
+  width: 50%;
+}
+
+.container.left {
+  left: 0;
+}
+
+.container.right {
+  left: 50%;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: calc(50% - 8px);
+  right: -8px;
+  background: var(--white-color);
+  border: 2px solid var(--dark-green);
+  border-radius: 16px;
+  z-index: 1;
+}
+
+.container.right::after {
+  left: -8px;
+}
+
+.container::before {
+  content: '';
+  position: absolute;
+  width: 50px;
+  height: 2px;
+  top: calc(50% - 1px);
+  right: 8px;
+  background:var(--dark-green);
+  z-index: 1;
+}
+
+.container.right::before {
+  left: 8px;
+}
+
+.container .date {
+  position: absolute;
+  display: inline-block;
+  top: calc(50% - 8px);
+  text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--dark-green);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+.container.left .date {
+  right: -75px;
+}
+
+.container.right .date {
+  left: -75px;
+}
+
+.container .icon {
+  position: absolute;
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  padding: 9px 0;
+  top: calc(50% - 20px);
+  background: var(--verde-escuro);
+  border: 2px solid var(--dark-green);
+  border-radius: 40px;
+  text-align: center;
+  font-size: 18px;
+  color: var(--dark-green);
+  z-index: 1;
+}
+
+.container.left .icon {
+  right: 56px;
+}
+
+.container.right .icon {
+  left: 56px;
+}
+
+.container .content {
+  padding: 30px 90px 30px 30px;
+  background: var(--dark-green);
+  position: relative;
+  border-radius: 0 500px 500px 0;
+}
+
+.container.right .content {
+  padding: 30px 30px 30px 90px;
+  border-radius: 500px 0 0 500px;
+}
+
+.container .content h2 {
+  margin: 0 0 10px 0;
+  margin-right: 15px;
+  font-size: 18px;
+  font-weight: normal;
+  color: var(--white-color);
+  font-weight: var(--font-weight-semibold);
+}
+
+.container .content p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--white-color);
+  font-weight: var(--font-weight-medium);
+}
+
+    @media (max-width: 767.98px) {
+      .timeline::after {
+        left: 90px;
+      }
+
+      .container {
+        width: 100%;
+        padding-left: 120px;
+        padding-right: 30px;
+      }
+
+      .container.right {
+        left: 0%;
+      }
+
+      .container.left::after, 
+      .container.right::after {
+        left: 82px;
+      }
+
+      .container.left::before,
+      .container.right::before {
+        left: 100px;
+        border-color: transparent var(--dark-green) transparent transparent;
+      }
+
+      .container.left .date,
+      .container.right .date {
+        right: auto;
+        left: 15px;
+      }
+
+      .container.left .icon,
+      .container.right .icon {
+        right: auto;
+        left: 146px;
+      }
+
+      .container.left .content,
+      .container.right .content {
+        padding: 30px 30px 30px 90px;
+        border-radius: 500px 0 0 500px;
+      }
 }

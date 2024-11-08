@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    /* Cores utilizadas no código */
+    --white-color: #ffffff;
+    --gray-color: #cccccc;
+    --dark-gray-color: #333;
+    --dark-green: #017143;
+    --timeline-line: #0b7b5d;
+    --bg-yellow: #F6D155;
+    --black-color: #000000;
+    --verde-escuro: #0c5738e2;
+    --medium-gray-color: #b3b3b3;
+    --secondary-color: #ff5733;
+    --marrom-queimado: #4e3023;
+    /* Tamanhos de fonte */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* Espessuras da fonte */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Raio da borda */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Largura máxima do site */
+    --site-max-width: 1300px;
+}
+
+/* Comportamento do scroll suave */
+html {
+    scroll-behavior: smooth; /* Faz o scroll da página ser suave */
+  }
+  
+  ul {
+    list-style: none; /* Remove marcadores das listas */
+  }
+  a {
+    text-decoration: none; /* Remove sublinhado de links */
+  }
+  button {
+    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
+    background: none; /* Remove cor de fundo */
+    border: none; /* Remove borda */
+  }
+  img {
+    width: 100%; /* Define as imagens para ocupar 100% da largura do elemento pai */
+  }
+  
+  
+  
+  
+  
+  
+  
+  /* Bloco de estilização para seções e rodapé */
+  :where(section, footer) .section-content {
+    margin: 0 auto; /* Centraliza o conteúdo */
+    padding: 0 20px; /* Adiciona espaçamento nas laterais */
+    max-width: var(--site-max-width); /* Define largura máxima */
+  }
+  /* Bloco de título das seções */
+  section .section-title {
+    text-align: center; /* Centraliza o texto */
+    padding: 60px 0 100px; /* Adiciona espaçamento acima e abaixo */
+    text-transform: uppercase; /* Transforma o texto em maiúsculas */
+    font-size: var(--font-size-xl); /* Define o tamanho da fonte */
+    
+  }
+  section .section-title::after {
+    content: ""; /* Adiciona conteúdo vazio após o título */
+    width: 80px; /* Define largura da linha */
+    height: 5px; /* Define altura da linha */
+    display: block; /* Exibe o elemento como bloco */
+    margin: 10px auto 0; /* Adiciona margens */
+    background: var(--golden-yellow); /* Define cor da linha */
+    border-radius: var(--border-radius-s); /* Define bordas arredondadas */
+  }
+  
+  
+  
+
+
+
+
+
+
+
+/* Bloco de Rodapé */
+
+/* Define o padding (espaçamento interno) para o rodapé e a cor de fundo baseada na cor primária do tema */
+.footer-section {
+  padding: 20px 0; /* Espaçamento superior e inferior de 20px, sem espaçamento lateral */
+  background:var(--dark-green); /* Cor de fundo usando uma variável CSS para a cor primária */
+}
+/* Define o layout interno da seção do rodapé, organizando os elementos como flexbox 
+   e centralizando-os verticalmente, além de distribuir o espaço entre os itens */
+.footer-section .section-content {
+  display: flex;
+  align-items: center; /* Alinha os itens verticalmente ao centro */
+  justify-content: space-between; /* Distribui os itens uniformemente, com espaço entre eles */
+}
+/* Aplica cor branca e uma transição suave ao passar o mouse sobre elementos como
+   textos de direitos autorais, links sociais e links de política */
+.footer-section :where(.copyright-text, .social-link, .policy-link) {
+  color: var(--white-color); /* Cor do texto branca, usando uma variável CSS */
+  transition: 0.2s ease; /* Define uma transição suave de 0.2 segundos para mudanças de estilo */
+}
+/* Define a disposição dos links sociais como flexbox com um espaçamento de 25px entre cada ícone */
+.footer-section .social-link-list {
+  display: flex; /* Exibe os ícones sociais horizontalmente */
+  gap: 25px; /* Espaçamento de 25px entre cada ícone */
+}
+/* Ajusta o tamanho da fonte dos ícones de links sociais, usando uma variável CSS */
+.footer-section .social-link-list .social-link {
+  font-size: var(--font-size-l); /* Define o tamanho da fonte dos ícones sociais */
+}
+/* Ao passar o mouse sobre um link social ou link de política, muda a cor para a cor secundária */
+.footer-section .social-link-list .social-link:hover,
+.footer-section .policy-text .policy-link:hover {
+  color: var(--marrom-queimado); /* Muda a cor dos links ao passar o mouse */
+}
+/* Define a aparência do separador (geralmente um pequeno traço ou ponto) entre textos de política */
+.footer-section .policy-text .separator {
+  color: #fff; /* Cor branca para o separador */
+  margin: 0 5px; /* Adiciona espaçamento de 5px à esquerda e à direita do separador */
+}
+
+
+
+
+

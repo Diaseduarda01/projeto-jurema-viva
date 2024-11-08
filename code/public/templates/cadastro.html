@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - codingnepalweb.com -->
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
    <title>jurema Viva | Login</title>
-    <link rel="stylesheet" href="../css/style-cadastro.css" />
+   <link rel="shortcut icon" href="../images/icon-logo.png" type="image/x-icon">
+   <link rel="stylesheet" href="../css/style-cadastro.css" />
   </head>
   <body>
+    <!-- <img src="../images/Contour Line.svg" alt=""> -->
     <section class="wrapper">
       <div onload="listar()" class="form signup">
         <header>Cadastre-se</header>
@@ -21,9 +22,9 @@
             <label for="signupCheck">Aceito todos os termos e condições</label>
           </div>
           <input type="submit" onclick="cadastrar()"  value="Cadastrar" />
-          <div id="div_aguardar" class="loading-div">
-            <img src="./assets/circle-loading.gif" id="loading-gif" />
-          </div>
+            <!-- <div id="div_aguardar" class="loading-div">
+              <img src="./assets/circle-loading.gif" id="loading-gif" />
+            </div> -->
         </form>
       </div>
 
@@ -36,19 +37,7 @@
           <input type="submit" onclick="entrar()" value="Entrar" />
         </form>
       </div>
-
-      <script>
-        const wrapper = document.querySelector(".wrapper"),
-          signupHeader = document.querySelector(".signup header"),
-          loginHeader = document.querySelector(".login header");
-
-        loginHeader.addEventListener("click", () => {
-          wrapper.classList.add("active");
-        });
-        signupHeader.addEventListener("click", () => {
-          wrapper.classList.remove("active");
-        });
-      </script>
     </section>
+    <script src="../js/main-cadastro.js"></script>
   </body>
 </html>

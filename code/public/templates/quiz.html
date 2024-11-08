@@ -11,79 +11,78 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
- <!-- Botão de iniciar Quiz -->
- <div class="start_btn">
-    <button onclick="comecarQuiz()">Começar o Quiz</button>
-</div>
+    <!-- Botão de iniciar Quiz -->
+    <div class="start_btn">
+        <button onclick="comecarQuiz()">Começar o Quiz</button>
+    </div>
 
-<!-- Caixa de Informações -->
-<div class="info_box">
-    <div class="info-title"><span>Algumas Regras deste Quiz</span></div>
-    <div class="info-list">
-        <div class="info">1. Você terá apenas <span>15 segundos</span> para cada pergunta.</div>
-        <div class="info">2. Uma vez que você selecione sua resposta, não poderá ser desfeita.</div>
-        <div class="info">3. Você não pode selecionar nenhuma opção depois que o tempo acabar.</div>
-        <div class="info">4. Você não pode sair do Quiz enquanto estiver jogando.</div>
-        <div class="info">5. Você ganhará pontos com base em suas respostas corretas.</div>
+    <!-- Caixa de Informações -->
+    <div class="info_box">
+        <div class="info-title"><span>Algumas Regras deste Quiz</span></div>
+        <div class="info-list">
+            <div class="info">1. Você terá apenas <span>15 segundos</span> para cada pergunta.</div>
+            <div class="info">2. Uma vez que você selecione sua resposta, não poderá ser desfeita.</div>
+            <div class="info">3. Você não pode selecionar nenhuma opção depois que o tempo acabar.</div>
+            <div class="info">4. Você não pode sair do Quiz enquanto estiver jogando.</div>
+            <div class="info">5. Você ganhará pontos com base em suas respostas corretas.</div>
+        </div>
+        <div class="buttons">
+            <button class="quit" onclick="sairQuizInfo()">Sair do Quiz</button>
+            <button class="restart" onclick="continuarQuiz()">Continuar</button>
+        </div>
     </div>
-    <div class="buttons">
-        <button class="quit" onclick="sairQuizInfo()">Sair do Quiz</button>
-        <button class="restart" onclick="continuarQuiz()">Continuar</button>
-    </div>
-</div>
 
-<!-- Caixa de Perguntas do Quiz -->
-<div class="quiz_box">
-    <header>
-        <div class="title">Quiz Jurema Sagrada</div>
-        <div class="timer">
-            <div class="time_left_txt">Tempo</div>
-            <div class="timer_sec">15</div>
-        </div>
-        <div class="time_line"></div>
-    </header>
-    <section>
-        <div class="que_text">
-            <!-- Inserção de pergunta via JavaScript -->
-        </div>
-        <div class="option_list">
-            <!-- Inserção de opções via JavaScript -->
-        </div>
-    </section>
+    <!-- Caixa de Perguntas do Quiz -->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Quiz Jurema Sagrada</div>
+            <div class="timer">
+                <div class="time_left_txt">Tempo</div>
+                <div class="timer_sec">15</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- Inserção de pergunta via JavaScript -->
+            </div>
+            <div class="option_list">
+                <!-- Inserção de opções via JavaScript -->
+            </div>
+        </section>
 
-    <!-- Rodapé da Caixa de Perguntas -->
-    <footer>
-        <div class="total_que">
-            <!-- Contador de perguntas inserido via JavaScript -->
-        </div>
-        <button class="next_btn" onclick="proximaPergunta()">Próximo</button>
-    </footer>
-</div>
+        <!-- Rodapé da Caixa de Perguntas -->
+        <footer>
+            <div class="total_que">
+                <!-- Contador de perguntas inserido via JavaScript -->
+            </div>
+            <button class="next_btn" onclick="proximaPergunta()">Próximo</button>
+        </footer>
+    </div>
 
-<!-- Caixa de Resultado -->
-<div class="result_box">
-    <div class="icon">
-        <i class="fas fa-crown"></i>
+    <!-- Caixa de Resultado -->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">Você completou o quiz!</div>
+        <div class="score_text">
+            <!-- Resultado de pontuação inserido via JavaScript -->
+        </div>
+        <div class="buttons">
+            <button class="restart" onclick="refazerQuiz()">Refazer o quiz</button>
+            <button class="quit" onclick="sairQuizInfo()">Sair do quiz</button>
+        </div>
     </div>
-    <div class="complete_text">Você completou o quiz!</div>
-    <div class="score_text">
-        <!-- Resultado de pontuação inserido via JavaScript -->
-    </div>
-    <div class="buttons">
-        <button class="restart" onclick="refazerQuiz()">Refazer o quiz</button>
-        <button class="quit" onclick="sairQuizInfo()">Sair do quiz</button> 
-    </div>
-</div>
 
     <script src="../js/main-quiz.js"></script>
     <script src="../js/questions-quiz.js"></script>
 
 </body>
-
-</html>
-
 </html>
