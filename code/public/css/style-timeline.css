@@ -3,14 +3,58 @@
 *::after {
   box-sizing: border-box;
 }
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    /* Cores utilizadas n   o código */
+    --white-color: #ffffff;        /* Usado para fundos e bordas */
+    --gray-color: #cccccc;         /* Usado em fundo e borda de elementos */
+    --dark-gray-color: #333;       /* Usado em texto */
+    --dark-green: #017143;         /* Usado em botões e destaque */
+    --timeline-line: #0b7b5d;      /* Usado na linha da timeline */
+    --bg-yellow: #F6D155;          /* Usado no fundo da timeline */
+    --black-color: #000000;        /* Usado em texto */
+    --verde-escuro: #0c5738e2;
+    
+    /* Tamanhos de fonte */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* Espessuras da fonte */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Raio da borda */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Largura máxima do site */
+    --site-max-width: 1300px;
+}
+
+
 .timeline {
     position: relative;
     width: 100%;
-    max-width: 1140px;
+    max-width: 1640px;
     margin: 0 auto;
     padding: 15px 0;
     overflow: hidden;
-    min-height: 500px; /* Ajuste a altura conforme necessário */
+    min-height: 800px; /* Ajuste a altura conforme necessário */
   }  
 
 .timeline::after {
@@ -22,6 +66,25 @@
   bottom: 0;
   left: 50%;
   margin-left: -1px;
+}
+.timeline .title {
+  width: 100%;
+  height: 200px;
+  margin: 0px;
+  font-size: var(--font-size-xxl);
+  align-content: center;
+  text-align: center;
+  background-color: var(--white-color);
+  position: relative; /* ou use absolute se quiser que ela se posicione de acordo com o elemento pai */
+  z-index: 100; /* Um valor alto para garantir que fique acima dos outros elementos */
+  border-radius: 50px;
+  color: var(--dark-green);
+}
+
+.timeline .title h1 {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  font-weight: var(--font-weight-bold);
 }
 
 .container {
@@ -85,11 +148,11 @@
 }
 
 .container.left .date {
-  right: -75px;
+  right: -170px;
 }
 
 .container.right .date {
-  left: -75px;
+  left: -155px;
 }
 
 .container .icon {

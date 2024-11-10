@@ -1,163 +1,178 @@
-<div class=".session-onu">
-    <div class="container">
-        <div class="cardd">
-            <div class="box">
-                <div class="content">
-                    <h2>01</h2>
-                    <h3>04 - Educação de Qualidade</h3>
-                    <p>O projeto oferece materiais educativos sobre a Jurema Sagrada, uma prática religiosa indígena frequentemente marginalizada.</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-        </div>
-    
-        <div class="cardd">
-            <div class="box">
-                <div class="content">
-                    <h2>02</h2>
-                    <h3>10 - Redução das Desigualdades</h3>
-                    <p>O projeto combate preconceito religioso e fortalece a inclusão e representatividade das comunidades indígenas e afro-brasileiras.</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-        </div>
-    
-        <div class="cardd">
-            <div class="box">
-                <div class="content">
-                    <h2>03</h2>
-                    <h3>16 - Paz, Justiça e Instituições Eficazes</h3>
-                    <p>O projeto valoriza tradições indígenas, promovendo respeito pelos direitos humanos e fortalecendo a paz entre grupos sociais.</p>
-                    <a href="#">Read More</a>
-                </div>
-            </div>
-        </div>
+<div class="container">
+  <h2>Frequently Asked Questions</h2>
+  <div class="accordion">
+    <div class="accordion-item">
+      <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">Why is the moon sometimes out during the day?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
     </div>
-
+    <div class="accordion-item">
+      <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">Why is the sky blue?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title">Will we ever discover aliens?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title">How much does the Earth weigh?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">How do airplanes stay up?</span><span class="icon" aria-hidden="true"></span></button>
+      <div class="accordion-content">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elementum sagittis vitae et leo duis ut. Ut tortor pretium viverra suspendisse potenti.</p>
+      </div>
+    </div>
+  </div>
 </div>
-  <style>@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;800&display=swap");
-    /* * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: "Poppins", sans-serif;
-    } */
-    
-    .session-onu {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      min-height: 100vh;
-      background: #232427;
-    }
-    
-    .session-onu .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-      max-width: 1200px;
-      margin: 40px 0;
-    }
-    
-    .session-onu .container .cardd {
-      position: relative;
-      min-width: 320px;
-      height: 440px;
-      box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.2),
-        inset -5px -5px 15px rgba(255, 255, 255, 0.1),
-        5px 5px 15px rgba(0, 0, 0, 0.3), -5px -5px 15px rgba(255, 255, 255, 0.1);
-      border-radius: 15px;
-      margin: 30px;
-      transition: 0.5s;
-    }
-    
-    .session-onu .container .cardd:nth-child(1) .box .content a {
-      background: #2196f3;
-    }
-    
-    .session-onu .container .cardd:nth-child(2) .box .content a {
-      background: #e91e63;
-    }
-    
-    .session-onu .container .cardd:nth-child(3) .box .content a {
-      background: #23c186;
-    }
-    
-    .session-onu .container .cardd .box {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      right: 20px;
-      bottom: 20px;
-      background: #2a2b2f;
-      border-radius: 15px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      transition: 0.5s;
-    }
-    
-    .session-onu .container .cardd .box:hover {
-      transform: translateY(-50px);
-    }
-    
-    .session-onu .container .cardd .box:before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 50%;
-      height: 100%;
-      background: rgba(255, 255, 255, 0.03);
-    }
-    
-    .session-onu .container .cardd .box .content {
-      padding: 20px;
-      text-align: center;
-    }
-    
-    .session-onu .container .cardd .box .content h2 {
-      position: absolute;
-      top: -10px;
-      right: 30px;
-      font-size: 8rem;
-      color: rgba(255, 255, 255, 0.1);
-    }
-    
-    .session-onu .container .cardd .box .content h3 {
-      font-size: 1.8rem;
-      color: #fff;
-      z-index: 1;
-      transition: 0.5s;
-      margin-bottom: 15px;
-    }
-    
-    .session-onu .container .cardd .box .content p {
-      font-size: 1rem;
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.9);
-      z-index: 1;
-      transition: 0.5s;
-    }
-    
-    .session-onu .container .cardd .box .content a {
-      position: relative;
-      display: inline-block;
-      padding: 8px 20px;
-      background: black;
-      border-radius: 5px;
-      text-decoration: none;
-      color: white;
-      margin-top: 20px;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-      transition: 0.5s;
-    }
-    .session-onu .container .cardd .box .content a:hover {
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
-      background: #fff;
-      color: #000;
-    }
-    </style>
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+*::before, *::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Hind', sans-serif;
+  background: #fff;
+  color: #4d5974;
+  display: flex;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 4rem;
+  width: 48rem;
+}
+
+.accordion .accordion-item {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.accordion .accordion-item button[aria-expanded='true'] {
+  border-bottom: 1px solid #03b5d2;
+}
+
+.accordion button {
+  position: relative;
+  display: block;
+  text-align: left;
+  width: 100%;
+  padding: 1em 0;
+  color: #7288a2;
+  font-size: 1.15rem;
+  font-weight: 400;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+.accordion button:hover,
+.accordion button:focus {
+  cursor: pointer;
+  color: #03b5d2;
+}
+
+.accordion button:hover .icon,
+.accordion button:focus .icon {
+  cursor: pointer;
+  color: #03b5d2;
+  border: 1px solid #03b5d2;
+}
+
+.accordion .accordion-title {
+  padding: 1em 1.5em 1em 0;
+}
+
+.accordion .icon {
+  display: inline-block;
+  position: absolute;
+  top: 18px;
+  right: 0;
+  width: 22px;
+  height: 22px;
+  border: 1px solid;
+  border-radius: 22px;
+}
+
+.accordion .icon::before {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 2px;
+  background: currentColor;
+}
+
+.accordion .icon::after {
+  display: block;
+  position: absolute;
+  content: '';
+  top: 5px;
+  left: 9px;
+  width: 2px;
+  height: 10px;
+  background: currentColor;
+}
+
+.accordion button[aria-expanded='true'] {
+  color: #03b5d2;
+}
+
+.accordion button[aria-expanded='true'] .icon::after {
+  width: 0;
+}
+
+.accordion .accordion-content {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+}
+
+.accordion button[aria-expanded='true'] + .accordion-content {
+  opacity: 1;
+  max-height: 9em;
+  transition: all 200ms linear;
+}
+
+.accordion .accordion-content p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 2em 0;
+}
+</style>
+
+<script>
+  const items = document.querySelectorAll(".accordion button");
+
+function toggleAccordion() {
+  const itemToggle = this.getAttribute('aria-expanded');
+  
+  for (i = 0; i < items.length; i++) {
+    items[i].setAttribute('aria-expanded', 'false');
+  }
+  
+  if (itemToggle == 'false') {
+    this.setAttribute('aria-expanded', 'true');
+  }
+}
+
+items.forEach(item => item.addEventListener('click', toggleAccordion));
+</script>

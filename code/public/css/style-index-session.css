@@ -54,7 +54,8 @@ h1 {
 
 /* Estilização do parágrafo */
 p {
-    margin-top: 15px;
+    text-align: center;
+    margin-top: 35px;
     font-size: 20px; /* Define o tamanho da fonte */
    
 }

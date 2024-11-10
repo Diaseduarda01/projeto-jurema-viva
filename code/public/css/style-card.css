@@ -27,24 +27,48 @@
     --border-radius-circle: 50%;
     --site-max-width: 1300px;
 }
-.banner-background{
-    background-image: url("../images/Contour Line.svg");
-    background-repeat: no-repeat;
-    background-size: cover; /* Faz com que a imagem ocupe toda a tela */
-    background-position: center; /* Centraliza a imagem */
-  }
 
-.card-columns {
+a{
+    text-decoration: none;
+}
+
+
+.banner-background{
+  background-image: url("../images/Contour Line.svg");
+  background-repeat: no-repeat;
+  background-size: cover; /* Faz com que a imagem ocupe toda a tela */
+  background-position: center; /* Centraliza a imagem */
+}
+#ultimo-card {
+    background-color: var(--dark-green);
+    color: var(--white-color);
+    margin: 0 auto; /* Centraliza horizontalmente */
+   
+    
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    padding: 1rem; /* Ajustado para um padding mais confortável */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+  
+  .card-columns {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Dois cards por linha */
     gap: 60px;
     padding: 1rem;
     width: var(--site-max-width);
-    margin: 40px auto; /* Centraliza e ajusta a margem */
-    margin-top: 0;
-    margin-bottom: 0;
-}
-
+    margin: 40px auto;
+  }
+  
+  .card-columns a:last-child {
+    grid-column: span 2; /* Faz com que o último card ocupe a linha inteira */
+  }
+  
 /* Layout responsivo para telas pequenas */
 @media (max-width: 576px) {
     .card-columns {
@@ -71,6 +95,7 @@
     justify-self: flex-end;
 }
 
+/* sessao de fotos 1 */
 #imgjurema{
     background-image: url("../images/padrinho-de-frente-sem-camisa.png" );
     background-repeat: no-repeat;
@@ -84,7 +109,33 @@
     background-position: center; /* Centraliza a imagem */
 }
 #imgtrabalho{
-    background-image: url("../images/trabalho.png");
+    background-image: url("../images/trabalho-nossa-senhora-aparecida.jpg");
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz com que a imagem ocupe toda a tela */
+    background-position: center; /* Centraliza a imagem */
+}
+#imgcadastro{
+    background-image: url("../images/cadastro.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz com que a imagem ocupe toda a tela */
+    background-position: center; /* Centraliza a imagem */
+}
+
+/* sessao de fotos 2 */
+#imgmalunguinho{
+    background-image: url("../images/malunguinho.png" );
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz com que a imagem ocupe toda a tela */
+    background-position: center; /* Centraliza a imagem */
+}
+#imgcaboclo{
+    background-image: url("../images/caboclo.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz com que a imagem ocupe toda a tela */
+    background-position: center; /* Centraliza a imagem */
+}
+#imgmestre{
+    background-image: url("../images/fumaca-no-mundo.jpeg");
     background-repeat: no-repeat;
     background-size: cover; /* Faz com que a imagem ocupe toda a tela */
     background-position: center; /* Centraliza a imagem */
