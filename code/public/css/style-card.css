@@ -72,7 +72,7 @@
 }
 
 #imgjurema{
-    background-image: url("../images/padrinho-sem-camisa.png" );
+    background-image: url("../images/padrinho-de-frente-sem-camisa.png" );
     background-repeat: no-repeat;
     background-size: cover; /* Faz com que a imagem ocupe toda a tela */
     background-position: center; /* Centraliza a imagem */
@@ -149,7 +149,8 @@
 }
 
 .card.text-card .card-title {
-    font-size: 1.15rem;
+    font-family: 'Poppins', sans-serif;
+    font-size:2rem;
     font-weight: var(--font-weight-bold);
     margin-bottom: 0.5rem;
 }
