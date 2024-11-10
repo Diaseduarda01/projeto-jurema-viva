@@ -35,107 +35,23 @@
     /* Largura máxima do site */
     --site-max-width: 1300px;
 }
-
-/* Comportamento do scroll suave */
-html {
-    scroll-behavior: smooth; /* Faz o scroll da página ser suave */
-  }
   
-  ul {
-    list-style: none; /* Remove marcadores das listas */
-  }
-  a {
-    text-decoration: none; /* Remove sublinhado de links */
-  }
-  button {
-    cursor: pointer; /* Altera o cursor ao passar sobre o botão */
-    background: none; /* Remove cor de fundo */
-    border: none; /* Remove borda */
-  }
-  img {
-    width: 100%; /* Define as imagens para ocupar 100% da largura do elemento pai */
-  }
-  
-  
-  
-  
-  
-  
-  
-  /* Bloco de estilização para seções e rodapé */
-  :where(section, footer) .section-content {
-    margin: 0 auto; /* Centraliza o conteúdo */
-    padding: 0 20px; /* Adiciona espaçamento nas laterais */
-    max-width: var(--site-max-width); /* Define largura máxima */
-  }
-  /* Bloco de título das seções */
-  section .section-title {
+  .footer-section {
+    background-color: var(--dark-green); /* Cor de fundo do rodapé */
+    color: var(--black-color); /* Cor do texto */
+    padding: 20px 0; /* Espaçamento superior e inferior */
     text-align: center; /* Centraliza o texto */
-    padding: 60px 0 100px; /* Adiciona espaçamento acima e abaixo */
-    text-transform: uppercase; /* Transforma o texto em maiúsculas */
-    font-size: var(--font-size-xl); /* Define o tamanho da fonte */
-    
-  }
-  section .section-title::after {
-    content: ""; /* Adiciona conteúdo vazio após o título */
-    width: 80px; /* Define largura da linha */
-    height: 5px; /* Define altura da linha */
-    display: block; /* Exibe o elemento como bloco */
-    margin: 10px auto 0; /* Adiciona margens */
-    background: var(--golden-yellow); /* Define cor da linha */
-    border-radius: var(--border-radius-s); /* Define bordas arredondadas */
+    font-size: var(--font-size-s); /* Define o tamanho do texto */
+    width: var(--site-max-width);
+    height: 100px;
   }
   
+  .footer-section .section-content {
+    max-width: var(--site-max-width); /* Define largura máxima */
+    margin: 0 auto; /* Centraliza o conteúdo */
+  }
   
+  .footer-section p {
+    margin: 5px 0; /* Espaçamento entre os parágrafos */
+  }
   
-
-
-
-
-
-
-
-/* Bloco de Rodapé */
-
-/* Define o padding (espaçamento interno) para o rodapé e a cor de fundo baseada na cor primária do tema */
-.footer-section {
-  padding: 20px 0; /* Espaçamento superior e inferior de 20px, sem espaçamento lateral */
-  background:var(--dark-green); /* Cor de fundo usando uma variável CSS para a cor primária */
-}
-/* Define o layout interno da seção do rodapé, organizando os elementos como flexbox 
-   e centralizando-os verticalmente, além de distribuir o espaço entre os itens */
-.footer-section .section-content {
-  display: flex;
-  align-items: center; /* Alinha os itens verticalmente ao centro */
-  justify-content: space-between; /* Distribui os itens uniformemente, com espaço entre eles */
-}
-/* Aplica cor branca e uma transição suave ao passar o mouse sobre elementos como
-   textos de direitos autorais, links sociais e links de política */
-.footer-section :where(.copyright-text, .social-link, .policy-link) {
-  color: var(--white-color); /* Cor do texto branca, usando uma variável CSS */
-  transition: 0.2s ease; /* Define uma transição suave de 0.2 segundos para mudanças de estilo */
-}
-/* Define a disposição dos links sociais como flexbox com um espaçamento de 25px entre cada ícone */
-.footer-section .social-link-list {
-  display: flex; /* Exibe os ícones sociais horizontalmente */
-  gap: 25px; /* Espaçamento de 25px entre cada ícone */
-}
-/* Ajusta o tamanho da fonte dos ícones de links sociais, usando uma variável CSS */
-.footer-section .social-link-list .social-link {
-  font-size: var(--font-size-l); /* Define o tamanho da fonte dos ícones sociais */
-}
-/* Ao passar o mouse sobre um link social ou link de política, muda a cor para a cor secundária */
-.footer-section .social-link-list .social-link:hover,
-.footer-section .policy-text .policy-link:hover {
-  color: var(--marrom-queimado); /* Muda a cor dos links ao passar o mouse */
-}
-/* Define a aparência do separador (geralmente um pequeno traço ou ponto) entre textos de política */
-.footer-section .policy-text .separator {
-  color: #fff; /* Cor branca para o separador */
-  margin: 0 5px; /* Adiciona espaçamento de 5px à esquerda e à direita do separador */
-}
-
-
-
-
-
