@@ -2,7 +2,7 @@ var database = require("../database/config");
 
 function rankingUsuarios() {
     var instrucao = `
-        SELECT * FROM vw_ranking_usuarios LIMIT 5;
+        SELECT * FROM vw_ranking_usuarios LIMIT 3   ;
     `;
     console.log("Executando instrução SQL:\n" + instrucao);
     return database.executar(instrucao);
