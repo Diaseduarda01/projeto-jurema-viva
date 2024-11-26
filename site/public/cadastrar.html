@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style-signup.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+    <link rel="shortcut icon" href="assets/images/icon-logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style-card-erro.css">
+    <link rel="stylesheet" href="css/style-loarder.css">
+    <title>Jurema Viva | Cadastrar</title>
+</head>
+
+<body>
+    <div onload="listar()" class="container">
+        <div class="form signup">
+            <span class="title">Cadastre-se</span>
+            <form action="#">
+                <div class="input-field">
+                    <input id="nome_input" type="text" placeholder="Insira seu Nome" required />
+                    <i class="uil uil-user"></i>
+                </div>
+                <div class="input-field">
+                    <input id="telefone_input" type="tel" placeholder="Insira seu Telefone" required />
+                    <i class="uil uil-phone"></i>
+                </div>
+                <div class="input-field">
+                    <input id="religiao_input" type="text" placeholder="Insira sua Religião" required />
+                    <i class="uil uil-book"></i>
+                </div>
+                <div class="input-field">
+                    <input id="email_cadastro_input" type="text" placeholder="Insira seu Email" required />
+                    <i class="uil uil-envelope icon"></i>
+                </div>
+                <div class="input-field">
+                    <input id="senha_cadastro_input" class="password" type="password" placeholder="Insira uma Senha" required />
+                    <i class="uil uil-lock icon"></i>
+                    <i class="uil uil-eye-slash showHidePw"></i>
+                </div>
+                <div class="checkbox-text">
+                    <div class="checkbox-content">
+                        <input type="checkbox" id="signupCheck" />
+                        <label for="signupCheck" class="text">Aceito todos os termos e condições</label>
+                    </div>
+                </div>
+                <div class="input-field button">
+                    <button class="botao" type="button" onclick="cadastrar(event)">Cadastrar</button>
+                </div>
+            </form>
+            <div class="login-signup">
+                <span class="text">Já tem uma conta? <a href="entrar.html" class="text login-link">Login Agora</a></span>
+            </div>
+        </div>
+    </div>
+
+    <!-- SVG de Carregamento -->
+    <div id="loading" style="display: none; text-align: center;">
+        <svg xmlns="http://www.w3.org/2000/svg" height="50px" width="50px" viewBox="0 0 200 200" class="pencil">
+            <defs>
+                <clipPath id="pencil-eraser">
+                    <rect height="30" width="30" ry="5" rx="5"></rect>
+                </clipPath>
+            </defs>
+            <circle transform="rotate(-113,100,100)" stroke-linecap="round" stroke-dashoffset="439.82" stroke-dasharray="439.82 439.82" stroke-width="2" stroke="currentColor" fill="none" r="70" class="pencil__stroke"></circle>
+            <g transform="translate(100,100)" class="pencil__rotate">
+                <g fill="none">
+                    <circle transform="rotate(-90)" stroke-dashoffset="402" stroke-dasharray="402.12 402.12" stroke-width="30" stroke="hsl(223,90%,50%)" r="64" class="pencil__body1"></circle>
+                    <circle transform="rotate(-90)" stroke-dashoffset="465" stroke-dasharray="464.96 464.96" stroke-width="10" stroke="hsl(223,90%,60%)" r="74" class="pencil__body2"></circle>
+                    <circle transform="rotate(-90)" stroke-dashoffset="339" stroke-dasharray="339.29 339.29" stroke-width="10" stroke="hsl(223,90%,40%)" r="54" class="pencil__body3"></circle>
+                </g>
+            </g>
+        </svg>
+    </div>
+    <div id="cardErro" class="show">
+        <p id="mensagem_erro">Mensagem de erro aqui</p>
+    </div>
+</body>
+
+</html>
+<script src="js/main-cadastro.js"></script>
+<script src="js/main-validacao-cadastro.js"></script>
+<script>
+
+    // Função para cadastrar o usuário
+    function cadastrar(event) {
+        event.preventDefault(); // Impede o envio automático do formulário
+        // Recupera valores das inputs
+        const nomeVar = document.getElementById("nome_input").value;
+        const telefoneVar = document.getElementById("telefone_input").value;
+        const religiaoVar = document.getElementById("religiao_input").value;
+        const emailVar = document.getElementById("email_cadastro_input").value;
+        const senhaVar = document.getElementById("senha_cadastro_input").value;
+
+        // Validações: interrompe o processo se qualquer validação falhar
+        if (
+            !validarNome(nomeVar) ||
+            !validarTelefone(telefoneVar) ||
+            !validarReligiao(religiaoVar) ||
+            !validarEmail(emailVar) ||
+            !validarSenha(senhaVar)
+        ) {
+            return false;
+        }
+
+        // Exibe o carregamento
+        document.getElementById("loading").style.display = "block";
+
+        // Envia os dados para cadastro
+        fetch("/usuarios/cadastrar", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+                nome: nomeVar,
+                telefone: telefoneVar,
+                religiao: religiaoVar,
+                email: emailVar,
+                senha: senhaVar,
+            }),
+        })
+        .then((resposta) => {
+            // Esconde o carregamento
+            document.getElementById("loading").style.display = "none";
+
+            if (resposta.ok) {
+                exibirMensagemSucesso("Cadastro realizado com sucesso! Redirecionando...");
+                setTimeout(() => {
+                    window.location.href = "entrar.html"; // Redireciona para a página de login
+                }, 2000); // Espera 2 segundos antes de redirecionar
+                limparFormularioCadastro();
+            } else {
+                resposta.text().then((texto) => console.error("Erro no cadastro:", texto));
+                throw "Houve um erro ao tentar realizar o cadastro!";
+            }
+        })
+        .catch((erro) => {
+            // Esconde o carregamento em caso de erro
+            document.getElementById("loading").style.display = "none";
+            console.error(`#ERRO: ${erro}`);
+            exibirMensagemErro("Erro ao realizar o cadastro. Tente novamente.");
+        });
+    }
+
+    // Função para limpar o formulário de cadastro
+    function limparFormularioCadastro() {
+        document.getElementById("nome_input").value = "";
+        document.getElementById("telefone_input").value = "";
+        document.getElementById("religiao_input").value = "";
+        document.getElementById("email_cadastro_input").value = "";
+        document.getElementById("senha_cadastro_input").value = "";
+    }
+
+</script>
