@@ -1,84 +1,63 @@
 var dashboardModel = require("../models/dashboardModel");
 
-function rankingUsuarios(req, res) {
-    dashboardModel.rankingUsuarios()
-        .then((resultado) => {
-            res.status(200).json(resultado);
-        })
-        .catch((erro) => {
-            console.error("Erro ao buscar ranking de usuários:", erro.sqlMessage);
-            res.status(500).json({ message: "Erro interno ao buscar ranking", error: erro.sqlMessage });
-        });
+function handleError(res, error, message) {
+    console.error(message, error.sqlMessage || error.message || error);
+    res.status(500).json({ message, error: error.sqlMessage || error.message || error });
 }
 
+function rankingUsuarios(req, res) {
+    dashboardModel.rankingUsuarios()
+        .then((resultado) => res.status(200).json(resultado))
+        .catch((erro) => handleError(res, erro, "Erro ao buscar ranking de usuários"));
+}
 
 function evolucaoDesempenho(req, res) {
-    const idUsuario = req.query.idUsuario;  // Obtém o id do usuário da query string
-    
-    if (!idUsuario) {
-        return res.status(400).send("O ID do usuário é obrigatório!");
-    }
-  
-    dashboardModel.evolucaoDesempenho(idUsuario)
-        .then((resultado) => {
-            res.status(200).json(resultado);
-        })
-        .catch((erro) => {
-            console.error("Erro ao buscar evolução de desempenho:", erro.sqlMessage);
-            res.status(500).json({ message: "Erro interno ao buscar evolução de desempenho", error: erro.sqlMessage });
-        });
+    const idUsuario = req.query.idUsuario;
 
-        console.log(pontuacao_usuario)
+    if (!idUsuario || isNaN(idUsuario)) {
+        return res.status(400).send("O ID do usuário é obrigatório e deve ser um número!");
+    }
+
+    dashboardModel.evolucaoDesempenho(idUsuario)
+        .then((resultado) => res.status(200).json(resultado))
+        .catch((erro) => handleError(res, erro, "Erro ao buscar evolução de desempenho"));
 }
 
 function percentualAcertos(req, res) {
-    var idQuiz = req.query.idQuiz; // ID do quiz passado na query string
+    const idQuiz = req.query.idQuiz;
 
-    if (!idQuiz) {
-        return res.status(400).send("O ID do quiz é obrigatório!");
+    if (!idQuiz || isNaN(idQuiz)) {
+        return res.status(400).send("O ID do quiz é obrigatório e deve ser um número!");
     }
 
     dashboardModel.percentualAcertos(idQuiz)
-        .then((resultado) => {
-            res.status(200).json(resultado);
-        })
-        .catch((erro) => {
-            console.error("Erro ao buscar percentual de acertos:", erro.sqlMessage);
-            res.status(500).json({ message: "Erro interno ao buscar percentual de acertos", error: erro.sqlMessage });
-        });
+        .then((resultado) => res.status(200).json(resultado))
+        .catch((erro) => handleError(res, erro, "Erro ao buscar percentual de acertos"));
 }
 
 function crescimentoUsuarios(req, res) {
     dashboardModel.crescimentoUsuarios()
-        .then((resultado) => {
-            res.status(200).json(resultado);
-        })
-        .catch((erro) => {
-            console.error("Erro ao buscar crescimento de usuários:", erro.sqlMessage);
-            res.status(500).json({ message: "Erro interno ao buscar crescimento de usuários", error: erro.sqlMessage });
-        });
+        .then((resultado) => res.status(200).json(resultado))
+        .catch((erro) => handleError(res, erro, "Erro ao buscar crescimento de usuários"));
 }
 
 function kpisUsuario(req, res) {
     const idUsuario = req.query.idUsuario;
-  
-    if (!idUsuario) {
-      return res.status(400).send("O ID do usuário é obrigatório!");
+
+    if (!idUsuario || isNaN(idUsuario)) {
+        return res.status(400).send("O ID do usuário é obrigatório e deve ser um número!");
     }
-  
+
     dashboardModel.kpisUsuario(idUsuario)
-      .then((resultado) => {
-        if (resultado.length > 0) {
-          res.status(200).json(resultado[0]); // Envia apenas o primeiro item
-        } else {
-          res.status(404).send("KPIs não encontradas para o usuário.");
-        }
-      })
-      .catch((erro) => {
-        console.error("Erro ao buscar KPIs do usuário:", erro.sqlMessage || erro);
-        res.status(500).json({ message: "Erro interno ao buscar KPIs do usuário", error: erro.sqlMessage || erro });
-      });
-  }
+        .then((resultado) => {
+            if (resultado.length > 0) {
+                res.status(200).json(resultado[0]);
+            } else {
+                res.status(404).send("KPIs não encontradas para o usuário.");
+            }
+        })
+        .catch((erro) => handleError(res, erro, "Erro ao buscar KPIs do usuário"));
+}
 
 module.exports = {
     rankingUsuarios,
