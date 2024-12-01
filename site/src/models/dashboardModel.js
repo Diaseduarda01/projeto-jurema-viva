@@ -2,7 +2,7 @@ var database = require("../database/config");
 
 function rankingUsuarios() {
     var instrucao = `
-        SELECT * FROM vw_ranking_usuarios LIMIT 3   ;
+        SELECT * FROM vw_ranking_usuarios LIMIT 3;
     `;
     console.log("Executando instrução SQL:\n" + instrucao);
     return database.executar(instrucao);
@@ -15,7 +15,6 @@ function evolucaoDesempenho(idUsuario) {
     console.log("Executando instrução SQL para evolução de desempenho:\n" + instrucao);
     return database.executar(instrucao);
 }
-
 function percentualAcertos(idQuiz) {
     var instrucao = `
         SELECT * FROM vw_percentual_acertos WHERE FkQuiz = ${idQuiz};

@@ -29,6 +29,7 @@ function percentualAcertos(req, res) {
     if (!idQuiz || isNaN(idQuiz)) {
         return res.status(400).send("O ID do quiz é obrigatório e deve ser um número!");
     }
+    console.log("idQuiz recebido no controller:", idQuiz);
 
     dashboardModel.percentualAcertos(idQuiz)
         .then((resultado) => res.status(200).json(resultado))

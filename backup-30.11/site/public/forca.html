@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jurema Viva | Forca</title>
+    <link rel="stylesheet" href="css/style-forca.css">
+    <script src="js/word-list-forca.js" defer></script>
+    <script src="js/script-forca.js" defer></script>
+    <link rel="shortcut icon" href="assets/images/icon-logo.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Modal de Fim de Jogo -->
+    <div class="game-modal">
+        <div class="modal-content">
+            <img src="#" alt="Resultado">
+            <h4>Game Over!</h4>
+            <p>A palavra correta era: <b>rainbow</b></p>
+            <button class="play-again">Jogar Novamente</button>
+        </div>
+    </div>
+
+    <!-- Contêiner Principal -->
+    <div class="container">
+        <!-- Caixa do Jogo da Forca -->
+        <div class="hangman-box">
+            <img src="assets/images/hangman-0.svg" draggable="false" alt="Imagem da Forca">
+            <h1>Jogo da Forca</h1>
+        </div>
+
+        <!-- Caixa do Jogo -->
+        <div class="game-box">
+            <ul class="word-display"></ul>
+            <h4 class="hint-text">Dica: <b></b></h4>
+            <h4 class="guesses-text">Tentativas: <b>0 / 6</b></h4>
+            <div class="difficulty">
+                Dificuldade: <b>Fácil</b>
+            </div>
+            <div class="keyboard"></div>
+        </div>
+    </div>
+</body>
+</html>

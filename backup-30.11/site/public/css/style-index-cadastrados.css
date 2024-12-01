@@ -1,0 +1,145 @@
+*{
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    /* Cores, tamanhos de fonte, espessuras da fonte, bordas e largura máxima conforme especificado */
+    --white-color: #ffffff;
+    --gray-color: #cccccc;
+    --dark-gray-color: #333;
+    --dark-green: #017143;
+    --timeline-line: #0b7b5d;
+    --bg-yellow: #F6D155;
+    --black-color: #000000;
+    --verde-escuro: #0c5738e2;
+    --cream-white: #f3f2db;
+    --cinza-medi0: #6c757d; 
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+    --site-max-width: 1300px;
+}
+
+a{
+    text-decoration: none;
+}
+body{
+    background-color: var(--dark-green);
+}
+
+  .card-columns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Dois cards por linha */
+    gap: 10px;
+    padding: 1rem;
+    margin: 40px auto;
+    /* border: 1px solid var(--dark-green); */
+  }
+  
+
+/* Alinhamento à esquerda e à direita para imagens */
+.left-align {
+    width: 60%;
+    height: 400px;
+    justify-self: flex-start;
+}
+
+.right-align {
+    width: 70%;
+    height: 400px;
+    justify-self: flex-end;
+}
+
+.card.quiz-rules {
+    /* background-color: #f9f9f9; */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+
+/* Estilo geral para os cards */
+.card {
+    /* background-color: #f9f9f9; */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+/* Estilo dos títulos */
+.card-title {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dark-green);
+}
+
+/* Divisores */
+.divider {
+    border: 0;
+    height: 1px;
+    background: #ddd;
+    margin: 10px 0 20px;
+}
+
+/* Lista de regras */
+.rules-list {
+    list-style-type: none; /* Remove as bolinhas padrão */
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    color: #555;
+    line-height: 1.8;
+    text-align: left; /* Texto começa da esquerda */
+}
+
+.rules-list li {
+    margin-bottom: 10px; /* Espaçamento entre os itens */
+    position: relative;
+    padding-left: 0; /* Alinha o texto */
+}
+
+/* Destaque para palavras importantes */
+.rules-list .highlight {
+    color: var(--timeline-line); /* Cor padrão com suporte a variável */
+    font-weight: bold;
+}
+
+/* Alinhamento específico do conteúdo interno */
+.card-body {
+    text-align: left; /* Alinha todo o conteúdo das regras à esquerda */
+}
+
+/* sessao de fotos 1 */
+#imgquiz{
+    background-image: url("../assets/images/quiz.png" );
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz com que a imagem ocupe toda a tela */
+    background-position: center; /* Centraliza a imagem */
+}
+#imgforca{
+    background-image: url("../assets/images/forca.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz com que a imagem ocupe toda a tela */
+    background-position: center; /* Centraliza a imagem */
+}
+#imgcruzada{
+    background-image: url("../assets/images/cruzada.png");
+    background-repeat: no-repeat;
+    background-size: cover; /* Faz com que a imagem ocupe toda a tela */
+    background-position: center; /* Centraliza a imagem */
+}

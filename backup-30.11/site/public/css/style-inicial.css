@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+:root {
+    /* Cores utilizadas n   o código */
+    --white-color: #ffffff;        /* Usado para fundos e bordas */
+    --gray-color: #cccccc;         /* Usado em fundo e borda de elementos */
+    --dark-gray-color: #333;       /* Usado em texto */
+    --dark-green: #017143;         /* Usado em botões e destaque */
+    --timeline-line: #0b7b5d;      /* Usado na linha da timeline */
+    --bg-yellow: #F6D155;          /* Usado no fundo da timeline */
+    --black-color: #000000;        /* Usado em texto */
+    --verde-escuro: #0c5738e2;
+    
+    /* Tamanhos de fonte */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* Espessuras da fonte */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* Raio da borda */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* Largura máxima do site */
+    --site-max-width: 1300px;
+}
+
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--white-color);
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header .logo{
+    position: relative;
+    max-width: 90px;
+}header ul {
+    position: relative;
+    display: flex;
+}
+
+header ul li {
+    list-style: none;
+}
+
+header ul li a {
+    display: inline-block;
+    color: var(--dark-gray-color);
+    font-weight: 400;
+    margin-left: 40px;
+    text-decoration: none;
+    padding: 10px 10px; /* Define padding para o tamanho do fundo */
+    transition: background-color 0.3s, color 0.3s; /* Suaviza a transição */
+    border-radius: 25px;
+}
+
+header ul li a:hover {
+    background-color: var(--dark-green); /* Cor de fundo verde */
+    color: var(--white-color); /* Cor do texto branco */
+    /* Arredonda o fundo, opcional */
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content .textbox{
+    position: relative;
+    max-width: 600px;
+}
+.content .textbox h2{
+    color:  var(--dark-gray-color);
+    font-size: 4.9em;
+    line-height: 1.4em;
+    font-weight: 500;
+}
+.content .textbox span{
+    color: #017143;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+.content .textbox p {
+    color:  var(--dark-gray-color);
+}
+.content .textbox a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background: var(--dark-green);
+    color: var(--white-color);
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: none;
+    text-decoration: none;
+}
+.content .imgBox {
+    width: 600px;
+    height: 400px; /* Ajuste a altura da div conforme necessário */
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 50px;
+    margin-top: 50px;
+    /* background-image: url(../images/images.jpg); */
+    background-size: cover; /* Faz a imagem de fundo cobrir toda a área da div */
+    background-repeat: no-repeat; /* Evita que a imagem se repita */
+    background-position: center; /* Centraliza a imagem */
+}
+
+.content .imgBox img{
+    max-width: 340px;
+}
+
+.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.70s;
+}
+.thumb li:hover{
+    transform: translateY(-15px);
+}
+.thumb .li img{
+    max-width: 60px;
+}
+.sci{
+    position:absolute;
+    top: 50%;
+    right: 30px;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.sci li {
+    list-style: none;
+}
+.sci li a{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(0.6);
+    filter: invert(1);
+}
+.circulo{
+    position: absolute;
+    top:20%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--dark-green);
+    clip-path: circle(700px at right 900px);
+}

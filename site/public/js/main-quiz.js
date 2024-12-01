@@ -221,4 +221,7 @@ function showCorrectAnswer() {
     for (var i = 0; i < allOptions; i++) {
         option_list.children[i].classList.add("disabled"); // Desabilitar todas as opções
     }
+
+     // Incrementar o contador de erros
+     incorrectAnswers++;
 }

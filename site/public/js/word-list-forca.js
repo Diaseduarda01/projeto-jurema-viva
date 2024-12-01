@@ -1,7 +1,7 @@
 [
     {
         "word": "indigena",
-        "hint": "Qual a origem da jurema?"
+        "hint": "Qual a  origem da jurema?"
     },
     {
         "word": "catolicismo",
