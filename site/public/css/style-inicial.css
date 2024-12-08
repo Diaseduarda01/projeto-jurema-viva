@@ -63,7 +63,7 @@ header{
 }
 header .logo{
     position: relative;
-    max-width: 90px;
+    max-width: 60px;
 }header ul {
     position: relative;
     display: flex;

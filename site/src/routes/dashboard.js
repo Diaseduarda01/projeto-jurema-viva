@@ -16,9 +16,9 @@ router.get("/acertos", function (req, res) {
     dashboardController.percentualAcertos(req, res);
 });
 
-router.get("/crescimento", function (req, res) {
-    dashboardController.crescimentoUsuarios(req, res);
-});
+// router.get("/crescimento", function (req, res) {
+//     dashboardController.crescimentoUsuarios(req, res);
+// });
 
 // Rota para KPIs de um usuário
 router.get("/kpis", function (req, res) {

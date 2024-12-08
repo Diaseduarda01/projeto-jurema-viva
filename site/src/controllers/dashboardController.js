@@ -36,11 +36,11 @@ function percentualAcertos(req, res) {
         .catch((erro) => handleError(res, erro, "Erro ao buscar percentual de acertos"));
 }
 
-function crescimentoUsuarios(req, res) {
-    dashboardModel.crescimentoUsuarios()
-        .then((resultado) => res.status(200).json(resultado))
-        .catch((erro) => handleError(res, erro, "Erro ao buscar crescimento de usuários"));
-}
+// function crescimentoUsuarios(req, res) {
+//     dashboardModel.crescimentoUsuarios()
+//         .then((resultado) => res.status(200).json(resultado))
+//         .catch((erro) => handleError(res, erro, "Erro ao buscar crescimento de usuários"));
+// }
 
 function kpisUsuario(req, res) {
     const idUsuario = req.query.idUsuario;
@@ -64,6 +64,5 @@ module.exports = {
     rankingUsuarios,
     evolucaoDesempenho,
     percentualAcertos,
-    crescimentoUsuarios,
     kpisUsuario
 };

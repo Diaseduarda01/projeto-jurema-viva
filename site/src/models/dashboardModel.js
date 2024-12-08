@@ -15,6 +15,7 @@ function evolucaoDesempenho(idUsuario) {
     console.log("Executando instrução SQL para evolução de desempenho:\n" + instrucao);
     return database.executar(instrucao);
 }
+
 function percentualAcertos(idQuiz) {
     var instrucao = `
         SELECT * FROM vw_percentual_acertos WHERE FkQuiz = ${idQuiz};
@@ -24,13 +25,13 @@ function percentualAcertos(idQuiz) {
 }
 
 
-function crescimentoUsuarios() {
-    var instrucao = `
-        SELECT * FROM vw_crescimento_usuarios;
-    `;
-    console.log("Executando instrução SQL para crescimento de usuários:\n" + instrucao);
-    return database.executar(instrucao);
-}
+// function crescimentoUsuarios() {
+//     var instrucao = `
+//         SELECT * FROM vw_crescimento_usuarios;
+//     `;
+//     console.log("Executando instrução SQL para crescimento de usuários:\n" + instrucao);
+//     return database.executar(instrucao);
+// }
 
 
 function kpisUsuario(idUsuario) {
@@ -46,6 +47,6 @@ module.exports = {
     rankingUsuarios,
     evolucaoDesempenho,
     percentualAcertos,
-    crescimentoUsuarios,
+    // crescimentoUsuarios,
     kpisUsuario
 };

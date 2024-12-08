@@ -158,20 +158,20 @@ function obterKpisUsuario() {
 
       // Garantir valores padrão caso as KPIs estejam ausentes
       const mediaPontuacao = parseFloat(kpis.media_pontuacao_usuario) || 0;
-      const taxaConclusao = parseFloat(kpis.taxa_conclusao) || 0;
+      const media_tempo_todos = parseFloat(kpis.media_tempo_todos) || 0;
       const tempoMedio = parseFloat(kpis.tempo_medio_usuario) || 0;
-      const usuariosAtivos = parseInt(kpis.media_pontuacao_todos, 10) || 0;
+      const mediaPontuacaoGeral = parseInt(kpis.media_pontuacao_todos, 10) || 0;
 
       // Atualiza os elementos do HTML com valores tratados
       const elMediaPontuacao = document.getElementById("average-score");
-      const elTaxaConclusao = document.getElementById("completion-rate");
+      const elmedia_tempo_todos = document.getElementById("completion-rate");
       const elTempoMedio = document.getElementById("average-time");
-      const elUsuariosAtivos = document.getElementById("active-users");
+      const elmediaPontuacaoGeral = document.getElementById("active-users");
 
       if (elMediaPontuacao) elMediaPontuacao.textContent = mediaPontuacao.toFixed(2);
-      if (elTaxaConclusao) elTaxaConclusao.textContent = `${taxaConclusao.toFixed(2)}%`;
+      if (elmedia_tempo_todos) elmedia_tempo_todos.textContent = `${media_tempo_todos.toFixed(2)}min`;
       if (elTempoMedio) elTempoMedio.textContent = `${tempoMedio.toFixed(2)} min`;
-      if (elUsuariosAtivos) elUsuariosAtivos.textContent = usuariosAtivos;
+      if (elmediaPontuacaoGeral) elmediaPontuacaoGeral.textContent = mediaPontuacaoGeral;
     })
     .catch((erro) => {
       console.error("Erro ao obter KPIs:", erro.message);
@@ -209,7 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const ctxAccuracy = document.getElementById("accuracy-chart")?.getContext("2d");
 if (ctxAccuracy) {
   carregarGrafico(ctxAccuracy, `/dashboard/acertos?idQuiz=1`, atualizarGraficoAccuracy, (data) => ({
-    labels: data.map((item) => `Pergunta ${item.numero_pergunta}`),
+    labels: data.map((item) => ` ${item.numero_pergunta}`),
     values: data.map((item) => item.percentual_acertos || 0)
   }));
 }
