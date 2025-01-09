@@ -34,32 +34,24 @@ O projeto contribui para:
 
 ## 🛠️ **Tecnologias Utilizadas**  
 
-- **HTML5**: Para estruturar as páginas.  
-- **CSS3**: Para estilizar com um design moderno e harmonioso em tons de verde.  
-- **JavaScript**: Para a interatividade, quizzes, jogos e rankings.  
+| **Ferramenta**         | **Descrição**                                       |  
+|-------------------------|----------------------------------------------------|  
+| ⚙️ **Node.js**         | Backend para processamento de dados.               |  
+| 🌐 **JavaScript**       | Desenvolvimento do frontend interativo.           |  
+| 📊 **Chart.js**         | Exibição gráfica dos dados coletados.             |  
+| 🗄️ **MySQL**           | Banco de dados local para armazenamento das informações. |  
+| 💻 **Lubuntu VM**      | Ambiente de desenvolvimento seguro e leve.         |  
 
 ---
 
-## 📂 **Organização do Repositório**  
 
-```plaintext
-jurema-viva/
-├── docs/                  # Documentação completa do projeto  
-├── code/                  # Código-fonte da aplicação  
-│   ├── enciclopedia/      # Seção de Enciclopédia Cultural  
-│   ├── quiz/              # Código do Quiz Interativo  
-│   └── jogo-da-forca/     # Código do Jogo da Forca  
-├── bd/                    # Estrutura do banco de dados  
-└── README.md              # Este arquivo  
-```  
-
----
 
 ## 📷 **Galeria de Imagens**  
 
 
 ![Captura de tela 2024-12-12 170826](https://github.com/user-attachments/assets/59c40145-54d3-4956-83b2-074e5ac0bcd7)
 
+![Captura de tela 2024-12-12 171343](https://github.com/user-attachments/assets/40454b0a-f069-428b-b9bf-6c2be7db017a)
 
 
 ![Captura de tela 2025-01-09 192239](https://github.com/user-attachments/assets/6aa16df4-f829-4949-801b-f84de36ba1da)
